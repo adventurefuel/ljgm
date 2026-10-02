@@ -9,7 +9,7 @@ like the agency's other client sites. Analytics run through the agency's shared 
 - `index.html`: the landing page. Inline CSS/JS, fully responsive (desktop → tablet → phone).
 - `admin.html`: passcode-protected analytics dashboard.
 - `assets/red-box-tee.jpg`: hero product image (cropped and cleaned from the approved mockup).
-- `assets/ljgm-mark.svg`: heart / cross / dollar mark, redrawn as a vector from the mockup.
+- `assets/ljgm-logo.webp` / `ljgm-logo-sm.webp`: the official heart / cross / dollar sticker logo (from the client). Also used for the favicons. The full-size original is at `docs/ljgm-logo-original.png`.
 - `assets/fonts/`: self-hosted Anton (headlines), Inter (body) and Caveat (handwritten notes), all SIL OFL.
 - `docs/`: approved mockups (both copy versions) and the original prototype handoff, kept for reference only.
 
@@ -69,11 +69,9 @@ service-role key. That key is never sent to the browser.
 1. **Email delivery:** visitors who ask for a copy are saved to `ljgm_plan_requests` (with their plan
    text), and the page says the LJGM team will send it. To send it automatically, add a Supabase Edge Function
    on insert using an email provider such as Resend or Postmark.
-2. **Logo:** the mark is a vector redraw of the mockup. If the official file `LJGM_Logo_-_Ready_for_DTF.png`
-   from the Shopify store should be used instead, drop it into `assets/` and update the three `<img>` tags.
-3. **Product photo:** the hero uses the tee from the approved mockup. To swap in a studio shot, replace
+2. **Product photo:** the hero uses the tee from the approved mockup. To swap in a studio shot, replace
    `assets/red-box-tee.jpg`. A dark or transparent background works best.
-4. Confirm the "Shop" nav link (`/collections/all`) and the privacy/consent wording for email capture with the client.
+3. Confirm the "Shop" nav link (`/collections/all`) and the privacy/consent wording for email capture with the client.
 
 ## Deploy
 
